@@ -39,6 +39,7 @@ const [type, setType] = useState('deposit')
         <RadioBox type="button"
         onClick={() => { setType('deposit'); }}
         isActive={type === 'deposit'}
+        activeColor="green"
         >
           <img src={incomeImg} alt="income" />
           <span>Income</span>
@@ -46,6 +47,7 @@ const [type, setType] = useState('deposit')
         <RadioBox type="button"
          onClick={() => { setType('withdraw');}}
            isActive={type === 'withdraw'}
+           activeColor="red"
            >
           <img src={outcomeImg} alt="Outome" />
           <span>Outcome</span>
