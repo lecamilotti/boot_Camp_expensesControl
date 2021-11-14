@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.div `
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 gap: 2rem;
 margin-top: -10rem;
+
 
 div {
   background: var(--shape);
@@ -33,4 +34,8 @@ div {
   }
 }
 
+@media (max-width: 680px) {
+  grid-template-columns: 1fr;
+}
+  
 `;
