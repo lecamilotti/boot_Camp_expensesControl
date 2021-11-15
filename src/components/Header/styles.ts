@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
-export const Container = styled.header`
+export const Container = styled.header `
 background: var(--blue);
+width: 100vw;
 `;
 
-export const Content = styled.div`
+export const Content = styled.div `
 max-width: 1120px;
 margin: 0 auto;
 
@@ -28,5 +29,16 @@ button {
   &:hover {
     filter: brightness(0.9);
   }
+
+  @media (max-width: 680px) {
+      margin: 0 auto;
+      padding: 0 1rem;
+    
+}
+
+@media (max-width: 300px) {
+  margin: 0 auto;
+    padding: 0 1rem;
+}
 }
 `;
