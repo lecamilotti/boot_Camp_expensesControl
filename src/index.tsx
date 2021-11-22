@@ -16,7 +16,7 @@ createServer({
           title: "Feelance Web",
           type: "deposit",
           category: "Dev",
-          amount: 100,
+          amount: 4000,
           createdAt: new Date("2021-02-12 09:00:04"),
         },
         {
@@ -24,7 +24,7 @@ createServer({
           title: "Rent",
           type: "withdraw",
           category: "House Hold",
-          amount: 10,
+          amount: 1200,
           createdAt: new Date("2021-02-14 11:00:00"),
         },
       ],
