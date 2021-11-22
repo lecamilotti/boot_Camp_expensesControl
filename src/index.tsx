@@ -1,8 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { createServer, Model } from 'miragejs';
-import { App } from './App';
-import Db from 'miragejs/db';
+import React from "react";
+import ReactDOM from "react-dom";
+import { createServer, Model } from "miragejs";
+import { App } from "./App";
 
 createServer({
   models: {
@@ -14,42 +13,41 @@ createServer({
       transactions: [
         {
           id: 1,
-          title: 'Feelance Web',
-          type: 'deposit',
-          category: 'Dev',
+          title: "Feelance Web",
+          type: "deposit",
+          category: "Dev",
           amount: 6000,
-          createdAt: new Date('2021-02-12 09:00:04'),
+          createdAt: new Date("2021-02-12 09:00:04"),
         },
         {
           id: 2,
-          title: 'Rent',
-          type: 'withdraw',
-          category: 'House Hold',
+          title: "Rent",
+          type: "withdraw",
+          category: "House Hold",
           amount: 6000,
-          createdAt: new Date('2021-02-14 11:00:00'),
+          createdAt: new Date("2021-02-14 11:00:00"),
         },
       ],
-    })
+    });
   },
 
   routes() {
-    this.namespace = 'api';
+    this.namespace = "api";
 
-    this.get('/transactions', () => {
-     return this.schema.all('transaction');
-    })
-  
-    this.post('/transactions', (schema, request) => {
-      const data = JSON.parse(request.requestBody)
-       return schema.create('transaction', data)
-    }
-    )
-  }
-})
+    this.get("/transactions", () => {
+      return this.schema.all("transaction");
+    });
+
+    this.post("/transactions", (schema, request) => {
+      const data = JSON.parse(request.requestBody);
+      return schema.create("transaction", data);
+    });
+  },
+});
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
