@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 export const Container = styled.div `
 display: grid;
 grid-template-columns: repeat(3, 1fr);
@@ -31,6 +32,11 @@ div {
   &.highlight-background {
     background-color: var(--green);
     color: #fff;
+  }
+
+
+  &.negative {
+    background-color: red;
   }
 }
 
